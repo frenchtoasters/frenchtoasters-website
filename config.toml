@@ -32,11 +32,3 @@ theme="hugo-darkdoc-theme"
     name   = "Demo"
     url    = "demo/"
     weight = 0
-
-    name   = "Getting started"
-    url    = "getting-started/"
-    weight = 10
-
-    name="Content"
-    url= "https://blog.frenchtoastman.com/posts/"
-    weight=0  
