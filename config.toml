@@ -33,10 +33,10 @@ theme="hugo-darkdoc-theme"
     url    = "demo/"
     weight = 0
 
-[[menu.main]]
     name   = "Getting started"
     url    = "getting-started/"
-  weight = 10
-  name="Content"
-  url= "https://blog.frenchtoastman.com/posts/"
-  weight=0  
+    weight = 10
+
+    name="Content"
+    url= "https://blog.frenchtoastman.com/posts/"
+    weight=0  
