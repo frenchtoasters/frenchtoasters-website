@@ -21,6 +21,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <description></description>
 =======
       <description>The Setup This article is about how to configure our Rancher test ENV.
@@ -42,6 +43,11 @@ WTF Am i doing? This is what I want to have setup here:
 WTF Am i doing? This is what I want to have setup here:
  Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to /opt/rke/snapshots Gitlab single node instance running on the cluster Turns out we have to scp it off the host first then do the rest on the bastin host Git init /opt/rke/snapshots as a repo etcd-snapshots Create cron job that runs:  git add .</description>
 >>>>>>> 619425824cb8a6c648de8de7754c03ddbed90e56
+=======
+      <description>The Setup This article is about how to configure our Rancher test ENV.
+WTF Am i doing? This is what I want to have setup here:
+ Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to /opt/rke/snapshots Gitlab single node instance running on the cluster Turns out we have to scp it off the host first then do the rest on the bastin host Git init /opt/rke/snapshots as a repo etcd-snapshots Create cron job that runs:  git add .</description>
+>>>>>>> 44815c0907b122faf0d1056c4d49dd410c207e9b
     </item>
     
   </channel>
