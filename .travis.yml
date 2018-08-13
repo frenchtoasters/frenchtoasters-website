@@ -12,7 +12,7 @@ install:
 
 ### Testing markdown and building website
 script:
-    - mdl -r ~MD002,~MD013,~MD033 content/ # rules MD013 & MD033 have been exluded
+    #- mdl -r ~MD002,~MD013,~MD033 content/ # rules MD013 & MD033 have been exluded
     - hugo
 
 ### Sending newly generated website to GitHub Pages site
