@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Blog of thangs"
 theme="hugo-darkdoc-theme"
 
+[permalinks]
+  post = "/:year/:month/:title/"
+
 [params]
   author = "Tyler French"
 
