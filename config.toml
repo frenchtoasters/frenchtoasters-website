@@ -1,37 +1,51 @@
-baseurl = "http://blog.frenchtoastman.com/"
-title = "FrenchToastman Blog"
-theme = "hugo-darkdoc-theme"
-metadataformat = "yaml"
-pygmentsUseClasses = true
+baseurl = "https://blog.frenchtoastman.com"
+title = "Toasting so much toast"
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "Tyler French"
+googleAnalytics = "XXX"
 
-[params]
-    # General information
-    author = "Tyler French"
-    description = "a good description"
-    copyright = "Released under my prefered license"
+[Privacy]
 
-  #demo website
-  demo_site = "http://demo.example.com"
+[Privacy.disqus]
+    disable = false
 
-    # Repository
-    provider = "GitHub"
-    repo_url = "https://github.com/frenchtoaters/"
-    repo_id = "frenchtoasters.github.io"
+[Privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = false
 
-    version = "1.0.0"
-    favicon = ""
+[Author]
+    name = "Tyler French"
+    profile = "https://blog.frenchtoastman.com/posts/about"
 
-    permalink = "#"
+[Taxonomies]
+    tag = "tags"
 
-[social]
-    github  = "frenchtoasters"
+[Params]
+    intro = true
+    headline = ""
+    description = "Toasting the toast"
+    github = "https://github.com/frenchtoasters"
+    email = "tylerfrench2@gmail.com"
+    opengraph = true
+    shareTwitter = true
+    shareFacebook = false
+    shareGooglePlus = true
+    shareLinkedIn = true
+    dateFormat = "Mon, Jan 2, 2006"
+    highlightJsUrl = ""
+    highlightJsLocalUrl = "js/highlight.pack.js"
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
 
 [[menu.main]]
-    name   = "Demo"
-    url    = "demo/"
-    weight = 0
+    name = "Blog"
+    url = "/posts/"
+    weight = 1
 
 [[menu.main]]
-    name   = "Getting started"
-    url    = "getting-started/"
-  weight = 10
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
