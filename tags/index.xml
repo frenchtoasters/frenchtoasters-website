@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+<<<<<<< HEAD
     <title>Tags on Blog of thangs</title>
     <link>http://blog.frenchtoastman.com/tags/</link>
     <description>Recent content in Tags on Blog of thangs</description>
@@ -26,10 +27,18 @@
 =======
     <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
 >>>>>>> 44815c0907b122faf0d1056c4d49dd410c207e9b
+=======
+    <title>Tags on FrenchToastman Blog</title>
+    <link>http://blog.frenchtoastman.com/tags/</link>
+    <description>Recent content in Tags on FrenchToastman Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
+>>>>>>> dcd7e0ec1b479636d53df7a951cd2182fd0a2cbe
     
 	<atom:link href="http://blog.frenchtoastman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -44,6 +53,8 @@
 >>>>>>> 619425824cb8a6c648de8de7754c03ddbed90e56
 =======
 >>>>>>> 44815c0907b122faf0d1056c4d49dd410c207e9b
+=======
+>>>>>>> dcd7e0ec1b479636d53df7a951cd2182fd0a2cbe
     <item>
       <title>Gitlab</title>
       <link>http://blog.frenchtoastman.com/tags/gitlab/</link>
@@ -75,6 +86,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
 =======
 >>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
@@ -84,5 +96,7 @@
 >>>>>>> 619425824cb8a6c648de8de7754c03ddbed90e56
 =======
 >>>>>>> 44815c0907b122faf0d1056c4d49dd410c207e9b
+=======
+>>>>>>> dcd7e0ec1b479636d53df7a951cd2182fd0a2cbe
   </channel>
 </rss>

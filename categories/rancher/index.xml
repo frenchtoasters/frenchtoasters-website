@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+<<<<<<< HEAD
     <title>Rancher on Blog of thangs</title>
     <link>http://blog.frenchtoastman.com/categories/rancher/</link>
     <description>Recent content in Rancher on Blog of thangs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+=======
+    <title>Rancher on FrenchToastman Blog</title>
+    <link>http://blog.frenchtoastman.com/categories/rancher/</link>
+    <description>Recent content in Rancher on FrenchToastman Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+>>>>>>> dcd7e0ec1b479636d53df7a951cd2182fd0a2cbe
     <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
     
 	<atom:link href="http://blog.frenchtoastman.com/categories/rancher/index.xml" rel="self" type="application/rss+xml" />
@@ -17,6 +24,7 @@
       <pubDate>Mon, 13 Aug 2018 09:32:37 -0400</pubDate>
       
       <guid>http://blog.frenchtoastman.com/posts/cicdallthethings/</guid>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +56,11 @@ WTF Am i doing? This is what I want to have setup here:
 WTF Am i doing? This is what I want to have setup here:
  Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to /opt/rke/snapshots Gitlab single node instance running on the cluster Turns out we have to scp it off the host first then do the rest on the bastin host Git init /opt/rke/snapshots as a repo etcd-snapshots Create cron job that runs:  git add .</description>
 >>>>>>> 44815c0907b122faf0d1056c4d49dd410c207e9b
+=======
+      <description>The Setup This article is about how to configure our Rancher test ENV.
+WTF Am i doing? This is what I want to have setup here:
+ Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to /opt/rke/snapshots Gitlab single node instance running on the cluster Turns out we have to scp it off the host first then do the rest on the bastin host Git init /opt/rke/snapshots as a repo etcd-snapshots Create cron job that runs:  git add .</description>
+>>>>>>> dcd7e0ec1b479636d53df7a951cd2182fd0a2cbe
     </item>
     
   </channel>

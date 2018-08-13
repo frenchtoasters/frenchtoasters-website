@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+<<<<<<< HEAD
     <title>Rancher on Blog of thangs</title>
     <link>http://blog.frenchtoastman.com/tags/rancher/</link>
     <description>Recent content in Rancher on Blog of thangs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+=======
+    <title>Rancher on FrenchToastman Blog</title>
+    <link>http://blog.frenchtoastman.com/tags/rancher/</link>
+    <description>Recent content in Rancher on FrenchToastman Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+>>>>>>> dcd7e0ec1b479636d53df7a951cd2182fd0a2cbe
     <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
     
 	<atom:link href="http://blog.frenchtoastman.com/tags/rancher/index.xml" rel="self" type="application/rss+xml" />
