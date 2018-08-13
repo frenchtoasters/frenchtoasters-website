@@ -7,10 +7,36 @@ theme="hugo-darkdoc-theme"
   post = "/:year/:month/:title/"
 
 [params]
-  author = "Tyler French"
+    # General information
+    author = "Tyler French"
+    description = "This blog of things"
+    copyright = "MITish"
 
+  #demo website
+  demo_site = "http://frenchtoastman.com"
+
+    # Repository
+    provider = "GitHub"
+    repo_url = "https://github.com/mynamemyproject"
+    repo_id = "myproject"
+
+    version = "1.0.0"
+    favicon = ""
+
+    permalink = "#"
+
+[social]
+    github  = "frenchtoasters"
 
 [[menu.main]]
+    name   = "Demo"
+    url    = "demo/"
+    weight = 0
+
+[[menu.main]]
+    name   = "Getting started"
+    url    = "getting-started/"
+  weight = 10
   name="Content"
-  url= "posts/"
+  url= "https://blog.frenchtoastman.com/posts/"
   weight=0  
