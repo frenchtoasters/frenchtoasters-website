@@ -18,12 +18,18 @@
       
       <guid>http://blog.frenchtoastman.com/posts/cicdallthethings/</guid>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <description></description>
 =======
       <description>The Setup This article is about how to configure our Rancher test ENV.
 WTF Am i doing? This is what I want to have setup here:
  Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to /opt/rke/snapshots Gitlab single node instance running on the cluster Turns out we have to scp it off the host first then do the rest on the bastin host Git init /opt/rke/snapshots as a repo etcd-snapshots Create cron job that runs:  git add .</description>
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
+=======
+      <description>The Setup This article is about how to configure our Rancher test ENV.
+WTF Am i doing? This is what I want to have setup here:
+ Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to /opt/rke/snapshots Gitlab single node instance running on the cluster Turns out we have to scp it off the host first then do the rest on the bastin host Git init /opt/rke/snapshots as a repo etcd-snapshots Create cron job that runs:  git add .</description>
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     </item>
     
   </channel>

@@ -32,14 +32,20 @@
   
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <loc>http://blog.frenchtoastman.com/tags/gitlab/</loc>
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+<<<<<<< HEAD
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
+=======
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <loc>http://blog.frenchtoastman.com/categories/gitlab/</loc>
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
     <priority>0</priority>
@@ -47,14 +53,20 @@
   
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <loc>http://blog.frenchtoastman.com/tags/kubernetes/</loc>
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+<<<<<<< HEAD
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
+=======
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <loc>http://blog.frenchtoastman.com/categories/kubernetes/</loc>
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
     <priority>0</priority>
@@ -68,14 +80,20 @@
   
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <loc>http://blog.frenchtoastman.com/tags/rancher/</loc>
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+<<<<<<< HEAD
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
+=======
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <loc>http://blog.frenchtoastman.com/categories/rancher/</loc>
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
     <priority>0</priority>
@@ -84,9 +102,13 @@
   <url>
     <loc>http://blog.frenchtoastman.com/tags/</loc>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <lastmod>2018-08-13T09:32:37-04:00</lastmod>
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
+=======
+    <lastmod>2018-08-13T09:32:37-04:00</lastmod>
+>>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
     <priority>0</priority>
   </url>
   
