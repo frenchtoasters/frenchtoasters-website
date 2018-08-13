@@ -1,3 +1,6 @@
 [submodule "themes/ceditor"]
 	path = themes/ceditor
 	url = https://github.com/aubm/hugo-code-editor-theme.git
+[submodule "themes/hugo-darkdoc-theme"]
+    path = themes/hugo-darkdoc-theme
+    url = https://github.com/adejoux/hugo-darkdoc-theme.git
