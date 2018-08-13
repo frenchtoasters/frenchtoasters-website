@@ -8,21 +8,28 @@
     <language>en-us</language>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
 =======
     <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
 >>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
+=======
+    <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
+>>>>>>> ec3cde1ba628040f950232abba5a5ddadab74a17
     
 	<atom:link href="http://blog.frenchtoastman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
+=======
+>>>>>>> ec3cde1ba628040f950232abba5a5ddadab74a17
     <item>
       <title>Gitlab</title>
       <link>http://blog.frenchtoastman.com/tags/gitlab/</link>
@@ -51,8 +58,11 @@
     </item>
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
 =======
 >>>>>>> 62dc6da9c3490a084c4b1664781c83e50300560b
+=======
+>>>>>>> ec3cde1ba628040f950232abba5a5ddadab74a17
   </channel>
 </rss>
