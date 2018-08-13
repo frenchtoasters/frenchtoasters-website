@@ -1,0 +1,9 @@
+baseurl = "http://blog.frenchtoastman.com/"
+languageCode = "en-us"
+title = "Blog of thangs"
+theme="ceditor"
+
+[params]
+  author = "Tyler French"
+  locale = "en-US"
+  

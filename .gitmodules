@@ -1,0 +1,3 @@
+[submodule "themes/ceditor"]
+	path = themes/ceditor
+	url = https://github.com/aubm/hugo-code-editor-theme.git

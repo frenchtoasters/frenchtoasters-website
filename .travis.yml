@@ -1,0 +1,36 @@
+### Python is necessary for AWS CLI
+language: python
+python:
+  - "3.6.5"
+
+### Installing pre-requisites
+install:
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.44/hugo_0.44_Linux-64bit.deb
+    - sudo dpkg -i hugo*.deb
+    - gem install mdl
+
+### Testing markdown and building website
+script:
+    - mdl -r ~MD002,~MD013,~MD033 content/ # rules MD013 & MD033 have been exluded
+    - hugo
+
+### Sending newly generated website to GitHub Pages site
+deploy:
+  # Control deployment by setting a value for `on`. Setting the `branch`
+  # option to `master` means Travis will only attempt a deployment on
+  # builds of your repo's master branch (e.g., after you merge a PR).
+  provider: pages
+  on:
+    branch: master
+  # GitHub Repo to deploy to
+  repo: "frenchtoasters/frenchtoasters.github.io"
+  # Target branch to commit to
+  target-branch: "master"
+  # Sets the custom domain for my GitHub page
+  fqdn: blog.frenchtoastman.com
+  # Prevent Travis from deleting your built site so it can be uploaded.
+  skip-cleanup: true
+  # GitHub personal access token
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  # Path to a directory containing your built site.
+  local-dir: public
