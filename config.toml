@@ -1,34 +1,60 @@
 baseurl = "http://blog.frenchtoastman.com/"
+title = "A blog thing"
+copyright = "Tyler French"
 languageCode = "en-us"
-title = "Blog of thangs"
 theme="hugo-darkdoc-theme"
+googleAnalytics = "XXXXXX"
+
+[Privacy]
+
+[Privacy.disqus]
+    disable = false
+
+[Privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+
+[Author]
+    name = "Tyler French"
+    profile = "https://blog.frenchtoastman.com/posts/about/"
+
+[Taxonomies]
+    tag = "tags"
 
 [permalinks]
-  post = "/:year/:month/:title/"
+  post = "/:year/:month/:dat/:filename"
 
-[params]
-    # General information
-    author = "Tyler French"
-    description = "This blog of things"
+[Params]
+    intro = true
+    headline = ""
+    description = "Doing weird things"
+    github = "https://github.com/frenchtoasters"
+    email = "tylerfrench2@gmail.com"
+    opengraph = true
+    shareTwitter = true
+    shareFacebook = false
+    shareGooglePlus = true
+    shareLinkedIn = true
+    dateFormat = "Mon, Jan 2, 2006"
+    highlightJsUrl = ""
+    highlightJsLocalUrl = "js/highlight.pack.js"
     copyright = "MITish"
-
-  #demo website
-  demo_site = "http://frenchtoastman.com"
-
-    # Repository
-    provider = "GitHub"
-    repo_url = "https://github.com/mynamemyproject"
-    repo_id = "myproject"
-
-    version = "1.0.0"
-    favicon = ""
-
-    permalink = "#"
 
 [social]
     github  = "frenchtoasters"
 
 [[menu.main]]
-    name   = "Demo"
-    url    = "demo/"
-    weight = 0
+    name   = "Content"
+    url    = "/posts/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/posts/about/"
+    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
