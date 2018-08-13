@@ -1,7 +1,7 @@
 baseurl = "http://blog.frenchtoastman.com/"
 languageCode = "en-us"
 title = "Blog of thangs"
-theme="hugo-darkdoc-theme"
+theme="ananke"
 
 [params]
   author = "Tyler French"
