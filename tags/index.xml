@@ -6,9 +6,43 @@
     <description>Recent content in Tags on Blog of thangs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+<<<<<<< HEAD
+=======
+    <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
+>>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
     
 	<atom:link href="http://blog.frenchtoastman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+<<<<<<< HEAD
+=======
+    <item>
+      <title>Gitlab</title>
+      <link>http://blog.frenchtoastman.com/tags/gitlab/</link>
+      <pubDate>Mon, 13 Aug 2018 09:32:37 -0400</pubDate>
+      
+      <guid>http://blog.frenchtoastman.com/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://blog.frenchtoastman.com/tags/kubernetes/</link>
+      <pubDate>Mon, 13 Aug 2018 09:32:37 -0400</pubDate>
+      
+      <guid>http://blog.frenchtoastman.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rancher</title>
+      <link>http://blog.frenchtoastman.com/tags/rancher/</link>
+      <pubDate>Mon, 13 Aug 2018 09:32:37 -0400</pubDate>
+      
+      <guid>http://blog.frenchtoastman.com/tags/rancher/</guid>
+      <description></description>
+    </item>
+    
+>>>>>>> 5eb2faaa15f50aef8cde60e1bed68a71337b1617
   </channel>
 </rss>
