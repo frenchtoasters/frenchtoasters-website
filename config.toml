@@ -11,6 +11,6 @@ theme="hugo-darkdoc-theme"
 
 
 [[menu.main]]
-  name="ETCD"
-  url= "etcd/"
+  name="Content"
+  url= "posts/"
   weight=0  
