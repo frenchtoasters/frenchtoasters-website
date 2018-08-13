@@ -5,4 +5,9 @@ theme="hugo-darkdoc-theme"
 
 [params]
   author = "Tyler French"
-  
+
+
+[[menu.main]]
+  name="ETCD"
+  url= "etcd/"
+  weight=0  
