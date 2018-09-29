@@ -1,3 +1,11 @@
++++
+categories = ["ci/cd","gitlab","etcd","kubernetes","rancher"]
+tags = ["gitlab","rancher","kubernetes"]
+title = "buildingthething"
+
++++
+
+
 # Building something in CI/CD
 
 In this post im am going to start explorering what all can be done with CI/CD pipelines in reguards to Kubernetes. So most people have been using CI/CD to deploy out their applications or modify their application that is running to fix a bug or address some feature request. But what can us infrastructure guys do with this? Well everyone seems to preach these days the infrastructure as code right? I dont really know where im going to stop with this post cause I could just cram in all everything into one or break it up but let me tell you there is a lot of stuff we can do.
