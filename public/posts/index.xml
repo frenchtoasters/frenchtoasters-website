@@ -1,21 +1,198 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Blog of thangs</title>
-    <link>http://blog.frenchtoastman.com/posts/</link>
-    <description>Recent content in Posts on Blog of thangs</description>
+    <title>Posts on Toasting so much toast</title>
+    <link>https://blog.frenchtoastman.com/posts/</link>
+    <description>Recent content in Posts on Toasting so much toast</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>Tyler French</copyright>
     <lastBuildDate>Mon, 13 Aug 2018 09:32:37 -0400</lastBuildDate>
-    <atom:link href="http://blog.frenchtoastman.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.frenchtoastman.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>cicdallthethings</title>
-      <link>http://blog.frenchtoastman.com/posts/cicdallthethings/</link>
+      <link>https://blog.frenchtoastman.com/posts/cicdallthethings/</link>
       <pubDate>Mon, 13 Aug 2018 09:32:37 -0400</pubDate>
       
-      <guid>http://blog.frenchtoastman.com/posts/cicdallthethings/</guid>
-      <description></description>
+      <guid>https://blog.frenchtoastman.com/posts/cicdallthethings/</guid>
+      <description>
+
+&lt;h1 id=&#34;the-setup:8ae3c6ac9a3b5a8985ba46bd1806cab3&#34;&gt;The Setup&lt;/h1&gt;
+
+&lt;p&gt;This article is about how to configure our Rancher test ENV.&lt;/p&gt;
+
+&lt;h2 id=&#34;wtf-am-i-doing:8ae3c6ac9a3b5a8985ba46bd1806cab3&#34;&gt;WTF Am i doing?&lt;/h2&gt;
+
+&lt;p&gt;This is what I want to have setup here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rancher RKE Deployment in AWS with ETCD snapshots enabled writing to &lt;code&gt;/opt/rke/snapshots&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Gitlab single node instance running on the cluster&lt;/li&gt;
+&lt;li&gt;Turns out we have to scp it off the host first then do the rest on the bastin host&lt;/li&gt;
+&lt;li&gt;Git init &lt;code&gt;/opt/rke/snapshots&lt;/code&gt; as a repo &lt;code&gt;etcd-snapshots&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create cron job that runs:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;git add .
+if FRIDAY:
+    git commit -m &amp;quot;Test Day&amp;quot;
+else:
+    git commit -m &amp;quot;Daily update&amp;quot;
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create CI/CD pipeline in gitlab for &lt;code&gt;etcd-snapshots&lt;/code&gt; repo that when &lt;code&gt;message=&amp;quot;Test Day&amp;quot;&lt;/code&gt; or some other logic that is better than this.
+
+&lt;ul&gt;
+&lt;li&gt;Workflow:
+
+&lt;ul&gt;
+&lt;li&gt;Deploy RKE cluster
+
+&lt;ul&gt;
+&lt;li&gt;With snapshots enabled would be same config&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;From Bastin host run following:
+
+&lt;ul&gt;
+&lt;li&gt;SSH to all and install git&lt;/li&gt;
+&lt;li&gt;Run git clone of &lt;code&gt;etcd-snapshots&lt;/code&gt; to get latest backup&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;rke etcd snapshot-restore --name ~/etcd-snapshots/latest --config cluster.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;If you get Success message good
+
+&lt;ul&gt;
+&lt;li&gt;Tare down everything&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Else fail
+
+&lt;ul&gt;
+&lt;li&gt;Maybe leave it up for investigation?&lt;/li&gt;
+&lt;li&gt;Maybe revert to previous state?&lt;/li&gt;
+&lt;li&gt;Tare down and notifiy?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;how-am-i-doing-this:8ae3c6ac9a3b5a8985ba46bd1806cab3&#34;&gt;How am i doing this?&lt;/h2&gt;
+
+&lt;p&gt;Well so what does this do for a person that is say, just responsable for kubernetes accessability? There job&amp;hellip; well ok not all of it but most of the annoying shit. Really though this eliminates the need to rely on any thing other than git and kuberenetes, two things that are already pretty married at the hip. How many times have you had to tell someone, &amp;ldquo;Oh the backups are actually curropt&amp;hellip;&amp;rdquo;, &amp;ldquo;The backups werent scheduled correctly and ran over&amp;hellip;&amp;rdquo;, or &amp;ldquo;We missed that server when we rebuilt the backup server&amp;hellip;&amp;rdquo; but hey they always open a support ticket with the vendor right? :face_palm: Git was built to manage changes in files, the snapshot of that etcd cluster you have is what again? Oh ya a file. Dont believe me, open it in vim :smile:. So if we are using this great tool as the persistent storage that for your database snapshots how are we going to trigger the actual saves? Well that is going to taken care of by a cronjob, something that has been around pretty much as long as the linux kernel. How do you get the snapshot? Its as easy as adding a few lines to your &lt;code&gt;cluster.yml&lt;/code&gt;, that will create a recurring snapshot policy and bam we have our setup!&lt;/p&gt;
+
+&lt;h2 id=&#34;configuration:8ae3c6ac9a3b5a8985ba46bd1806cab3&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Get &lt;code&gt;cluster.yml&lt;/code&gt; for RKE deployment&lt;/li&gt;
+&lt;li&gt;Deploy RKE cluster&lt;/li&gt;
+&lt;li&gt;Deploy gitlab in container (optional)
+
+&lt;ul&gt;
+&lt;li&gt;Deployment in container is up and running using the config, however i cannot push to it atm ssh key issue&lt;/li&gt;
+&lt;li&gt;Using gitlab.com for demo&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Configure &lt;code&gt;/opt/rke/ectd-snapshots/&lt;/code&gt; as git repo in gitlab
+
+&lt;ul&gt;
+&lt;li&gt;note that you have to use sudo so the ssh key you are using is for root&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;requirements:8ae3c6ac9a3b5a8985ba46bd1806cab3&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git lfs&lt;/code&gt; enabled for repo
+
+&lt;ul&gt;
+&lt;li&gt;We are using &lt;code&gt;git lfs&lt;/code&gt; as in genral our DB is larger than the 50MB that GitLab starts complaining about when it comes to file size. Since we are using this we have a couple of limitations that come with it:
+
+&lt;ul&gt;
+&lt;li&gt;Max file size supported 2GB&lt;/li&gt;
+&lt;li&gt;This should not be a conceren those as by default the max size the etcd cluster is set to is 2GB, it wasnt till v3.3 that the limit for a max supported limit for the DB size was increased to 10GB (here)[&lt;a href=&#34;https://coreos.com/blog/announcing-etcd-3.3&#34;&gt;https://coreos.com/blog/announcing-etcd-3.3&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;12:48 start fresh dump: 12:55 finish fresh dump
+
+&lt;ul&gt;
+&lt;li&gt;Local connection has no effect from AWS -&amp;gt; Gitlab.com&lt;/li&gt;
+&lt;li&gt;Will have faster? speeds with hosted gitlab instance&lt;/li&gt;
+&lt;li&gt;Speed went from 5MB to 43KB, idk would have been faster&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;each node will be working on their own branch in the repo
+
+&lt;ul&gt;
+&lt;li&gt;verification happens by diff the snapshots with the same name?&lt;/li&gt;
+&lt;li&gt;or after we get a push from all 3 branches they are merged in order of FIFM(First branch in, is the first one merged)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;start-of-blog:8ae3c6ac9a3b5a8985ba46bd1806cab3&#34;&gt;Start of Blog&lt;/h2&gt;
+
+&lt;p&gt;Insert &lt;code&gt;ci/cd all the things meme&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;What developer or engineer doesnt love &lt;code&gt;git&lt;/code&gt; for version control? I cant really think of any, that got me thinking one day. Whaten all can I use &lt;code&gt;git&lt;/code&gt; to store for me? Well it just so happen that at he time of that thought I was working on deploying &lt;code&gt;kubernetes&lt;/code&gt; into production. I had just configured &lt;code&gt;etcd&lt;/code&gt; to start taking snapshots and happen to see if I could open one up in &lt;code&gt;vim&lt;/code&gt; and when it did, it hit me. Where better to store these snapshots, the life blood of a &lt;code&gt;kubernetes&lt;/code&gt; cluster in the the same location where we are storing all the configuration, coomand line tools, and service deployments at. Then you know while we are at since we get a webhook to play with from that &lt;code&gt;git&lt;/code&gt; repo we could create for the snapshots what can we do with it? Well why not just do the very thing we want to garuentee is we can do later using our fancy pants &lt;code&gt;CI/CD&lt;/code&gt; pipelines and build out a test cluster from the snapshot. Dont worry I cant do all that in one post, so grab a beer and get to your reading spot.&lt;/p&gt;
+
+&lt;p&gt;So first things first we are going to need a cluster to start backing up. So in this repo I have included the &lt;code&gt;cluster.yml&lt;/code&gt; file that was used to build out my test cluster. It has enough settings to get you started on defining your own cluster. Now that is sorted we some nodes to deploy to, spin up one of the supported OS&amp;rsquo;s for &lt;code&gt;rke&lt;/code&gt; deployments. I choose to go with the basic &lt;code&gt;ubuntu-16.04-lts&lt;/code&gt; image on AWS, this is because we are going to need to be able to install &lt;code&gt;git&lt;/code&gt; on these boxes for simplicity you can get real fancy with how you run the commit say a cron scheduled container? However I first attempted this I had some issues with getting &lt;code&gt;git lfs&lt;/code&gt; to run correctly with the mounted volume on the container. After all the nodes are deploy and up you are going to need to make sure in your current &lt;code&gt;PATH&lt;/code&gt; you have the &lt;code&gt;rke&lt;/code&gt; binary included in this repo. Then you only need to run the following to get the cluster up:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rke up --config /path/to/cluser.yml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wait a few mins and everything should be gucci and you wil have an &lt;code&gt;rke&lt;/code&gt; deployment of &lt;code&gt;kubernetes&lt;/code&gt;. Next we are going to install a couple things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First we need to install &lt;code&gt;open-iscsi&lt;/code&gt; on each cluster node.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt install open-iscsi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;NOTE&lt;/em&gt;&lt;/strong&gt; If you used the AWS image this is already installed on all nodes&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Next we are going to need to install &lt;code&gt;Longhorn&lt;/code&gt; from the catalog in the &lt;code&gt;longhorn&lt;/code&gt; namespace in our cluster. This is done by first clicking &lt;code&gt;Default&lt;/code&gt; or which ever project you wish from the cluster drop down. Then going to &lt;code&gt;Catalogs&lt;/code&gt; at the top and searching for &lt;code&gt;longhorn&lt;/code&gt; at the top right. Then you can click the deployment here and select the &lt;code&gt;namespace&lt;/code&gt; you wish to install it into and the port you wish to expose for its &lt;code&gt;UI&lt;/code&gt;. After that give it a few mins and then you will have a simple &lt;code&gt;Persistent Storage&lt;/code&gt; provider installed on the cluster. This is just one of many different &lt;code&gt;StorageClass&lt;/code&gt; drivers available for &lt;code&gt;kubernetes&lt;/code&gt; also one of the simplest to install which is why I used it for this article. Once all the containers are up for this new service we can then start making &lt;code&gt;Persistent Volume Claims&lt;/code&gt; with our &lt;code&gt;kubernetes&lt;/code&gt; services. Can you guess what the first one we are going to install is?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You may have guessed it, &lt;code&gt;GitLab&lt;/code&gt;, so using the &lt;code&gt;gitlab.yaml&lt;/code&gt; that is included in this repo you should be able to deploy a &lt;code&gt;GitLab&lt;/code&gt; instance with &lt;code&gt;80&lt;/code&gt;,&lt;code&gt;443&lt;/code&gt;, and &lt;code&gt;22&lt;/code&gt;. You may need to make some tweaks on how you have these &lt;code&gt;nodeports&lt;/code&gt; exposed to the outside world based on which loadbalancer you are working with. This &lt;code&gt;StatefulSet&lt;/code&gt; deployment will also create &lt;code&gt;3 PVC&lt;/code&gt; claims which will trigger &lt;code&gt;longhorn&lt;/code&gt; to create, by default, &lt;code&gt;3&lt;/code&gt; replicas of each claim. After those are created the main container will start up and go through its inital configuration. It is important to note that Gitlyou will need to pass the flag which enables &lt;code&gt;git lfs&lt;/code&gt; within your &lt;code&gt;GitLab&lt;/code&gt; server. After all that is finsihed you should have &lt;code&gt;GitLab&lt;/code&gt; deployed with the key directories mounted to &lt;code&gt;PVC&lt;/code&gt; claims and ready for you to create the repo we are going to be storing to.&lt;/p&gt;
+
+&lt;p&gt;I dont really feel like writing here how to get the repo configured as its kinda outside this demo, so we will skip that here and assume your repo is configured. Now you may have seen that in the &lt;code&gt;cluster.yml&lt;/code&gt; we configured some &lt;code&gt;etcd&lt;/code&gt; snapshot guidelines. These tell the cluster to take an &lt;code&gt;etcd-snapshot&lt;/code&gt; of the cluster at a given interval and keep a certian amount of them at &lt;code&gt;/opt/rke/etcd-snapshots&lt;/code&gt;. So guess where we are going? Thats right, fire up tmux and ssh to each of the different nodes in our cluster and we are going to do the following to &lt;code&gt;git init&lt;/code&gt; the &lt;code&gt;/opt/rke/etcd-snapshots&lt;/code&gt; folder as out target for the &lt;code&gt;git repo&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We are first going create an ssh-key for the &lt;code&gt;root&lt;/code&gt; user on each node:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo ssh-keygen
+#Hit enter a bunch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Then we need to run &lt;code&gt;cat /root/.ssh/id_rsa.pub&lt;/code&gt; copy the output and add all the keys as a deployment keys to the &lt;code&gt;git repo&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now that it is added we need to run the following in &lt;code&gt;/opt/rke/etcd-snapshots&lt;/code&gt; on each node&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;git init
+git remote add origin git@gitlab.frenchtoastman.com:root/etcd-snapshots
+git lfs track /opt/rke/etcd-snapshots
+git add .
+git commit -m &amp;quot;Seed&amp;quot;
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Wait about 5-10 mins, this varies based on the size of the cluster&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;After the above completes on each node you are going to run the following to give each node their own branch to push to:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b node-name
+git add .
+git commit -m &amp;quot;node branch seed&amp;quot;
+git push -u origin node-name
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After that compeletes on each of or nodes we now have our full seed of each &lt;code&gt;etcd&lt;/code&gt; snapshot backup. All that is left to do is build out our &lt;code&gt;CI/CD&lt;/code&gt; pipeline for what we want to do! Here is where we can get creative and do some fancy things, this is also where im going to call it on this first post. The next post about this will have to contian all the cool stuff we can do with these backups in &lt;code&gt;git&lt;/code&gt;, which could be quite a few things.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
