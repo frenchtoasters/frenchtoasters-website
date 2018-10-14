@@ -1,6 +1,6 @@
 baseurl = "https://blog.frenchtoastman.com"
 title = "Toasting so much toast"
-theme = "ghostwriter"
+theme = "hyde"
 languageCode = "en-us"
 copyright = "Tyler French"
 googleAnalytics = "XXX"
