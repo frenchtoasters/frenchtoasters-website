@@ -1,3 +1,10 @@
++++
+categories = ["ci/cd","gitlab","etcd","kubernetes","rancher"]
+tags = ["gitlab","rancher","kubernetes"]
+title = "testingdeployment"
+
++++
+
 # Automated Testing
 
 Now its time for something fun, this post is going to be taking the ideas from the previous post and giving you all an example of how they can be applied. We are going to be building out test nodes in our vCD environment, built from an valid image for running kubernetes, then taking our backups we have in our etcd gitlab repo and restoring our cluster to these new nodes. Oh and all this will be done by our robot overlords, who can always be called upon by a webhook 24/7 so we humans can restart our brains. 
