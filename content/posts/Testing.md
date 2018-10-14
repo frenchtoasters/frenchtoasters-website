@@ -1,5 +1,6 @@
 +++
 categories = ["ci/cd","gitlab","etcd","kubernetes","rancher"]
+date = "2018-10-14T09:32:37-04:00"
 tags = ["gitlab","rancher","kubernetes"]
 title = "testingdeployment"
 
