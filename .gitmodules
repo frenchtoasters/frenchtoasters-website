@@ -5,5 +5,5 @@
 	path = themes/ghostwriter
 	url = https://github.com/jbub/ghostwriter.git
 [submodule "hyde"]
-	path = hyde
+	path = themes/hyde
 	url = https://github.com/spf13/hyde.git
