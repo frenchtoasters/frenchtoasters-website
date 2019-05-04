@@ -120,7 +120,7 @@ There are a few things you will need in place before we can start our work here.
 vcd_org_is_enabled{org_full_name="Lobster-Shack",org_name="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480"} 1.0
 ```
 
-* vcd_vdc_cpu_allocated
+* vcd_vdc_cpu_allocated:
 
 ```
 # HELP vcd_vdc_cpu_allocated CPU allocated to vdc
@@ -128,7 +128,7 @@ vcd_org_is_enabled{org_full_name="Lobster-Shack",org_name="urn:vcloud:org:0be49a
 vcd_vdc_cpu_allocated{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",org_name="Lobster-Shack",vdc_id="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vdc_is_enabled="True",vdc_name="DR"} 0.0
 ```
 
-* vcd_vdc_mhz_to_vcpu
+* vcd_vdc_mhz_to_vcpu:
 
 ```
 # HELP vcd_vdc_mhz_to_vcpu Mhz to vCPU ratio of vdc
@@ -136,7 +136,7 @@ vcd_vdc_cpu_allocated{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0
 vcd_vdc_mhz_to_vcpu{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",org_name="Lobster-Shack",vdc_id="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vdc_is_enabled="True",vdc_name="DR"} 1000.0
 ```
 
-* vcd_vdc_memory_allocated
+* vcd_vdc_memory_allocated:
 
 ```
 # HELP vcd_vdc_memory_allocated Memory allocated to vdc
@@ -144,7 +144,7 @@ vcd_vdc_mhz_to_vcpu{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0be
 vcd_vdc_memory_allocated{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",org_name="Lobster-Shack",vdc_id="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vdc_is_enabled="True",vdc_name="DR"} 0.0
 ```
 
-* vcd_vdc_memory_used_bytes
+* vcd_vdc_memory_used_bytes:
 
 ```
 # HELP vcd_vdc_memory_used_bytes Memory used by vdc in bytes
@@ -152,7 +152,7 @@ vcd_vdc_memory_allocated{allocation_model="AllocationVApp",org_id="urn:vcloud:or
 vcd_vdc_memory_used_bytes{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",org_name="Lobster-Shack",vdc_id="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vdc_is_enabled="True",vdc_name="DR"} 0.0
 ```
 
-* vcd_vdc_used_network_count
+* vcd_vdc_used_network_count:
 
 ```
 # HELP vcd_vdc_used_network_count Number of networks used by vdc
@@ -160,7 +160,7 @@ vcd_vdc_memory_used_bytes{allocation_model="AllocationVApp",org_id="urn:vcloud:o
 vcd_vdc_used_network_count{allocation_model="AllocationVApp",org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",org_name="Lobster-Shack",vdc_id="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vdc_is_enabled="True",vdc_name="DR"} 2.0
 ```
 
-* vcd_vdc_vapp_status
+* vcd_vdc_vapp_status:
 
 ```
 # HELP vcd_vdc_vapp_status Status of vApp
@@ -168,7 +168,7 @@ vcd_vdc_used_network_count{allocation_model="AllocationVApp",org_id="urn:vcloud:
 vcd_vdc_vapp_status{org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",org_name="Lobster-Shack",vapp_deployed="false",vapp_id="urn:vcloud:vapp:276e345a-3b35-436f-85cb-42242c0421d6",vapp_name="Web",vapp_status="1",vdc_id="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vdc_is_enabled="True",vdc_name="DR"} 1.0
 ```
 
-* vcd_vdc_vapp_in_maintenance
+* vcd_vdc_vapp_in_maintenance:
 
 ```
 # HELP vcd_vdc_vapp_in_maintenance Status of maintenance mode of given vApp
@@ -176,7 +176,7 @@ vcd_vdc_vapp_status{org_id="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480"
 vcd_vdc_vapp_in_maintenance{org_id="DR",org_name="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",vapp_deployed="false",vapp_id="urn:vcloud:vapp:276e345a-3b35-436f-85cb-42242c0421d6",vapp_name="Web",vdc_id="1",vdc_is_enabled="Lobster-Shack",vdc_name="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c"} 0.0
 ```
 
-* vcd_vdc_vapp_vm_status
+* vcd_vdc_vapp_vm_status:
 
 ```
 # HELP vcd_vdc_vapp_vm_status Status of VM
@@ -184,7 +184,7 @@ vcd_vdc_vapp_in_maintenance{org_id="DR",org_name="urn:vcloud:org:0be49a83-0e85-4
 vcd_vdc_vapp_vm_status{org_id="Lobster-Shack",org_name="True",vapp_deployed="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vapp_id="App",vapp_name="false",vdc_id="DR",vdc_name="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",vm_deployed="false",vm_id="urn:vcloud:vm:393da289-6f35-4d19-82cd-67ba4793ce6e",vm_name="app2.lobstershack.com_replica",vm_os_type="urn:vcloud:vapp:ba2291d4-d730-4ea7-8bfe-7edadfa7bb94",vm_status="8"} 8.0
 ```
 
-* vcd_vdc_vapp_vm_vcpu
+* vcd_vdc_vapp_vm_vcpu:
 
 ```
 # HELP vcd_vdc_vapp_vm_vcpu vCPU count of vm in given vApp of vdc
@@ -192,7 +192,7 @@ vcd_vdc_vapp_vm_status{org_id="Lobster-Shack",org_name="True",vapp_deployed="urn
 vcd_vdc_vapp_vm_vcpu{org_id="Lobster-Shack",org_name="True",vapp_deployed="urn:vcloud:vdc:12aa5168-bd0b-4958-acf8-2b40f706a81c",vapp_id="App",vapp_name="false",vdc_id="DR",vdc_name="urn:vcloud:org:0be49a83-0e85-460a-b1b4-9ac84a4de480",vm_deployed="false",vm_id="urn:vcloud:vm:393da289-6f35-4d19-82cd-67ba4793ce6e",vm_name="app2.lobstershack.com_replica",vm_os_type="urn:vcloud:vapp:ba2291d4-d730-4ea7-8bfe-7edadfa7bb94",vm_status="8"} 2.0
 ```
 
-* vcd_vdc_vapp_vm_allocated_memory_mb
+* vcd_vdc_vapp_vm_allocated_memory_mb:
 
 ```
 # HELP vcd_vdc_vapp_vm_allocated_memory_mb Memory allocated to VM of given vApp of vdc
