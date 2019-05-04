@@ -49,3 +49,18 @@ googleAnalytics = "XXX"
     name = "Tags"
     url = "/tags/"
     weight = 2
+
+[[menu.main]]
+    name = "Github"
+    url = "https://github.com/frenchtoasters"
+    weight = 2
+
+[[menu.main]]
+    name = "GitLab"
+    url = "https://gitlab.com/frenchtoasters"
+    weight = 2
+
+[[menu.main]]
+    name = "Email"
+    url = "mailto:tylerfrench2@gmail.com"
+    weight = 2
