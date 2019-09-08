@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.frenchtoastman.com/</loc>
-    <lastmod>2018-08-13T09:32:37-04:00</lastmod>
-    <priority>0</priority>
+    <loc>https://blog.frenchtoastman.com/posts/testing/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/posts/building/</loc>
+    <lastmod>2018-10-05T09:32:37-04:00</lastmod>
   </url>
   
   <url>
@@ -13,11 +18,74 @@
   </url>
   
   <url>
-    <loc>https://blog.frenchtoastman.com/posts/Testing/</loc>
+    <loc>https://blog.frenchtoastman.com/posts/visualizethedata/</loc>
+    <lastmod>2018-05-01T09:32:37-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.frenchtoastman.com/posts/Building/</loc>
+    <loc>https://blog.frenchtoastman.com/tags/gitlab/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/grafana/</loc>
+    <lastmod>2018-05-01T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/kubernetes/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/posts/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/prometheus/</loc>
+    <lastmod>2018-05-01T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/rancher/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/</loc>
+    <lastmod>2018-10-14T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/vcd/</loc>
+    <lastmod>2018-05-01T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/vcloud/</loc>
+    <lastmod>2018-05-01T09:32:37-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.frenchtoastman.com/tags/vmware/</loc>
+    <lastmod>2018-05-01T09:32:37-04:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
