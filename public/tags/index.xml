@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Toasting so much toast</title>
+    <link>https://blog.frenchtoastman.com/tags/</link>
+    <description>Recent content in Tags on Toasting so much toast</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tyler French</copyright>
+    <lastBuildDate>Sun, 14 Oct 2018 09:32:37 -0400</lastBuildDate>
+    
+	<atom:link href="https://blog.frenchtoastman.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://blog.frenchtoastman.com/tags/gitlab/</link>
+      <pubDate>Sun, 14 Oct 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://blog.frenchtoastman.com/tags/grafana/</link>
+      <pubDate>Tue, 01 May 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://blog.frenchtoastman.com/tags/kubernetes/</link>
+      <pubDate>Sun, 14 Oct 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://blog.frenchtoastman.com/tags/prometheus/</link>
+      <pubDate>Tue, 01 May 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rancher</title>
+      <link>https://blog.frenchtoastman.com/tags/rancher/</link>
+      <pubDate>Sun, 14 Oct 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/rancher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vcd</title>
+      <link>https://blog.frenchtoastman.com/tags/vcd/</link>
+      <pubDate>Tue, 01 May 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/vcd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vcloud</title>
+      <link>https://blog.frenchtoastman.com/tags/vcloud/</link>
+      <pubDate>Tue, 01 May 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/vcloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vmware</title>
+      <link>https://blog.frenchtoastman.com/tags/vmware/</link>
+      <pubDate>Tue, 01 May 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/tags/vmware/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

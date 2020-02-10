@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vcloud on Toasting so much toast</title>
+    <link>https://blog.frenchtoastman.com/tags/vcloud/</link>
+    <description>Recent content in Vcloud on Toasting so much toast</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tyler French</copyright>
+    <lastBuildDate>Tue, 01 May 2018 09:32:37 -0400</lastBuildDate>
+    
+	<atom:link href="https://blog.frenchtoastman.com/tags/vcloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>prometheusExporter?</title>
+      <link>https://blog.frenchtoastman.com/posts/visualizethedata/</link>
+      <pubDate>Tue, 01 May 2018 09:32:37 -0400</pubDate>
+      
+      <guid>https://blog.frenchtoastman.com/posts/visualizethedata/</guid>
+      <description>The Setup In the previous post we talked about deploying some hosts using the vcd-cli so one thing you might be asking is &amp;ldquo;How can I view the state of this&amp;rdquo;. Well you could always just login to the console and go check things one at a time but who really has time for that? There are also several canned reports that you could use to gather and show you this information, but why wait for the report to generate when you wanna see the health or current utilization of things?</description>
+    </item>
+    
+  </channel>
+</rss>
